@@ -1,0 +1,281 @@
+/* =========================
+   GLOBAL STYLES (Element Selector)
+========================= */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+    line-height: 1.6;
+}
+
+/* Container for layout consistency */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    background: #1e3c72;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    margin: 0;
+}
+
+.tagline {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* =========================
+   NAVBAR (Flexbox)
+========================= */
+.navbar {
+    margin-top: 15px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+/* Combinator selector */
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Pseudo-classes */
+.nav-list li a:hover {
+    background: #2a5298;
+}
+
+.nav-list li a:active {
+    color: yellow;
+}
+
+/* Class selector */
+.active {
+    border-bottom: 2px solid white;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #eef2f3, #dfe9f3);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #1e3c72;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* =========================
+   POSTS (GRID)
+========================= */
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Card Design (Box Model) */
+.card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* nth-child pseudo-class */
+.card:nth-child(2) {
+    border: 2px solid #1e3c72;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #111;
+    color: white;
+    margin-top: 40px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+    .post-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+}
+/* =========================
+   BLOG GRID
+========================= */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.blog-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.blog-card:hover {
+    transform: translateY(-6px);
+}
+.blog-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.blog-content {
+    padding: 15px;
+}
+
+.meta {
+    font-size: 12px;
+    color: gray;
+}
+.blog-card:nth-child(odd) {
+    border-left: 4px solid #1e3c72;
+}
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================
+   ABOUT SECTION
+========================= */
+.about-section {
+    padding: 40px 0;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+}
+.about-text {
+    max-width: 800px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.about-text h3 {
+    margin-top: 20px;
+    color: #1e3c72;
+}
+.skills-list {
+    padding-left: 20px;
+}
+
+.skills-list li {
+    margin: 8px 0;
+}
+.skills-list li:hover {
+    color: #1e3c72;
+}
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact-subtext {
+    margin-bottom: 20px;
+    color: #555;
+}
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+input:focus,
+textarea:focus {
+    border-color: #1e3c72;
+    outline: none;
+}
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn-submit:hover {
+    background: #2a5298;
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
