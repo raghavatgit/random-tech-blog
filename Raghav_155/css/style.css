@@ -279,3 +279,31 @@ textarea:focus {
 .btn-submit:active {
     transform: scale(0.98);
 }
+
+/* ========================
+   PRINT & CODE FORMATTING
+======================== */
+pre, code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.95em;
+}
+
+@media print {
+    .header, .footer, .btn, .navbar, .contact-section {
+        display: none !important;
+    }
+    body {
+        background: white !important;
+        color: #111 !important;
+        font-size: 11pt;
+    }
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .card, .blog-card {
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+    }
+}
